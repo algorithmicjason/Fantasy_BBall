@@ -1,0 +1,2 @@
+class FanClubsController < ApplicationController
+end

@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  team: one
+  name: MyString
+  age: 1
+  bio: MyText
+  years_of_experience: 1
+  championships: 1
+
+two:
+  team: two
+  name: MyString
+  age: 1
+  bio: MyText
+  years_of_experience: 1
+  championships: 1

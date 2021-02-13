@@ -1,0 +1,2 @@
+module FanClubsHelper
+end
