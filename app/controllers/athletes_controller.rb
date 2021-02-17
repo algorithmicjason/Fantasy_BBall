@@ -29,6 +29,8 @@ class AthletesController < ApplicationController
     end 
 
     def destroy 
+        find_athlete.destroy
+        redirect_to athletes_path
 
     end
 
