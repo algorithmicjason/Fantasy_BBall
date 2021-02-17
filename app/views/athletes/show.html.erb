@@ -1,0 +1,9 @@
+<h1> Welcome to <%= @athlete.name%> page </h1>
+<ul>
+    <li> Position : <%= @athlete.position %>
+    <li> Jersey Number : <%= @athlete.jersey %>
+    <li> Height : <%= @athlete.height %>
+    <li> Years in the leauge : <%= @athlete.years_of_experience %>
+    <li> Championships : <%= @athlete.championships %>
+    <li> Current Team : <%= Team.all.find_by(id: @athlete.team.id).name.capitalize%>
+</ul>

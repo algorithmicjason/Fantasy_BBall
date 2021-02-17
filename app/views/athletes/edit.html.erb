@@ -1,0 +1,16 @@
+
+<h1> Edit <%= @athlete.name %> </h1>
+
+
+<%= form_with model: @athlete do |a| %>
+    
+    Name : <%= a.text_field :name %><br><br>
+    Position : <%= a.text_field :position %><br><br>
+    Jersey Number : <%= a.text_field :jersey  %><br><br>
+    Height : <%= a.text_field :height  %><br><br>
+    Years in the league : <%= a.text_field :years_of_experience  %><br><br>
+    Championships : <%= a.text_field :championships %><br><br>
+    Current Team : <%= a.collection_select :team_id , Team.all, :id, :name %><br><br>
+   
+    <%= a.submit %><br>
+  <% end %>

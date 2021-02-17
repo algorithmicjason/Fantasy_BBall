@@ -1,0 +1,18 @@
+<% if flash[:errors] %>
+<h3> ERRORS: </h3>
+<% flash[:errors].each do |e| %>
+    <%= e %>
+<% end %>
+<% end %>
+
+
+<h1> Create your own Mascot! </h1>
+
+<%= form_with model: @mascot do |a| %>
+    
+    Name : <%= a.text_field :name %><br><br>
+    Character : <%= a.text_field :character %><br><br>
+    Bio : <%= a.text_field :bio  %><br><br>
+    Team :  <%= a.collection_select :team_id , Team.all, :id, :name %><br><br>
+    <%= a.submit %><br>
+  <% end %>

@@ -1,0 +1,9 @@
+<h1> Welcome to <%= @coach.name%> page </h1>
+<ul>
+    <li> Name : <%= @coach.name %>
+    <li> Age : <%= @coach.age %>
+    <li> Bio : <%= @coach.bio %>
+    <li> Years in the leauge : <%= @coach.years_of_experience %>
+    <li> Championships : <%= @coach.championships %>
+    <li> Current Team : <%= Team.all.find_by(id: @coach.team.id).name.capitalize%>
+</ul>

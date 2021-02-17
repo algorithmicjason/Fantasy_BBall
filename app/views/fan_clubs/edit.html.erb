@@ -1,0 +1,17 @@
+<% if flash[:errors] %>
+<h3> ERRORS: </h3>
+<% flash[:errors].each do |e| %>
+    <%= e %>
+<% end %>
+<% end %>
+
+
+<h1> Edit your own Fan Club! </h1>
+
+<%= form_with model: @fan_club do |a| %>
+    
+    Name : <%= a.text_field :name %><br><br>
+    Location : <%= a.text_field :location %><br><br>
+    Team to cheer! :  <%= a.collection_select :team_id , Team.all, :id, :name %><br><br>
+    <%= a.submit %><br>
+  <% end %>

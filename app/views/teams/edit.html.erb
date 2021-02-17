@@ -1,0 +1,12 @@
+<h1>Edit your team </h1>
+
+
+<%= form_with model: @team do |a| %>
+    
+    Name : <%= a.text_field :name %><br><br>
+    Color : <%= a.text_field :color %><br><br>
+    City : <%= a.text_field :city   %><br><br>
+   
+    <%= a.submit %><br>
+  <% end %>
+  

@@ -1,0 +1,6 @@
+<h1> Welcome to <%= @fan_club.name%> page </h1>
+<ul>
+    <li> Name : <%= @fan_club.name %>
+    <li> Location : <%= @fan_club.location %>
+    <li> Current Team : <%= Team.all.find_by(id: @fan_club.team.id).name.capitalize%>
+</ul>

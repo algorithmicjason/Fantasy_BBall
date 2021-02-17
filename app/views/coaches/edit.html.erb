@@ -1,0 +1,13 @@
+
+
+<%= form_with model: @coach do |a| %>
+    
+    Name : <%= a.text_field :name %><br><br>
+    Age : <%= a.text_field :age %><br><br>
+    Bio : <%= a.text_field :bio  %><br><br>
+    Years in the league : <%= a.text_field :years_of_experience %><br><br>
+    Current Team : <%= a.collection_select :team_id , Team.all, :id, :name %><br><br>
+   
+    <%= a.submit %><br>
+  <% end %>
+  
