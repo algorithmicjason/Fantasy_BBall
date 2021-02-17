@@ -17,7 +17,7 @@ class TeamsController < ApplicationController
             redirect_to teams_path
         else 
             flash[:errors] = @team.errors.full_messages
-            redirect_to new_teams_path
+            redirect_to new_team_path
         end 
     end 
 
@@ -30,7 +30,8 @@ class TeamsController < ApplicationController
     end 
 
     def destroy 
-
+        find_team.destroy
+        redirect_to teams_path
     end
 
     private 

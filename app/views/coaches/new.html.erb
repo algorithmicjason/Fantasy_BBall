@@ -1,7 +1,9 @@
 <% if flash[:errors] %>
-<h3> ERRORS: </h3>
+<h3> list of errors: </h3>
 <% flash[:errors].each do |e| %>
+    <li>
     <%= e %>
+    </li>
 <% end %>
 <% end %>
 
@@ -14,6 +16,7 @@
     Age : <%= a.text_field :age %><br><br>
     Bio : <%= a.text_field :bio  %><br><br>
     Years in the league : <%= a.text_field :years_of_experience %><br><br>
+    Championships : <%= a.text_field :championships %><br><br>
     Current Team : <%= a.collection_select :team_id , Team.all, :id, :name %><br><br>
    
     <%= a.submit %><br>

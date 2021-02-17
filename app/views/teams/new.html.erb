@@ -1,5 +1,13 @@
 <h1> Create your own team </h1>
 
+<% if flash[:errors] %>
+<h3> ERRORS: </h3>
+<% flash[:errors].each do |e| %>
+    <%= e %>
+<% end %>
+<% end %><br><br>
+
+
 <%= form_with model: @team do |a| %>
     
     Name : <%= a.text_field :name %><br><br>

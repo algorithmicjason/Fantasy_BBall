@@ -1,4 +1,6 @@
 <h1> Welcome to <%= @athlete.name%> page </h1>
+
+
 <ul>
     <li> Position : <%= @athlete.position %>
     <li> Jersey Number : <%= @athlete.jersey %>
@@ -11,3 +13,5 @@
 <%= form_tag athlete_path(@athlete.id), method: "delete" do %>
   <%= submit_tag "Delete #{@athlete.name}" %>
 <% end %> 
+
+

@@ -24,8 +24,12 @@ class AthletesController < ApplicationController
 
     def update 
         find_athlete
-        @athlete.update(athlete_params)
+        if @athlete.update(athlete_params)
         redirect_to athletes_path
+            else 
+                flash[:errors] = @athlete.errors.full_messages
+                redirect_to edit_athlete_path(@athlete)
+            end 
     end 
 
     def destroy 

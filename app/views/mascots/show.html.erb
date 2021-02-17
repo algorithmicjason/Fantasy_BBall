@@ -5,3 +5,7 @@
     <li> Character : <%= @mascot.character %>
     <li> Current Team : <%= Team.all.find_by(id: @mascot.team.id).name.capitalize%>
 </ul>
+
+<%= form_tag mascot_path(@mascot.id), method: "delete" do %>
+    <%= submit_tag "Delete #{@mascot.name}" %>
+  <% end %> 

@@ -30,7 +30,8 @@ class FanClubsController < ApplicationController
     end 
 
     def destroy 
-
+        find_fan_club.destroy
+        redirect_to fan_clubs_path
     end
 
     private 

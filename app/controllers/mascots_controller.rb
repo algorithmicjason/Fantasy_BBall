@@ -29,7 +29,8 @@ class MascotsController < ApplicationController
     end 
 
     def destroy 
-
+        find_mascot.destroy
+        redirect_to mascots_path
     end
 
     private 

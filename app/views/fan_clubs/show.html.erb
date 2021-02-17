@@ -4,3 +4,8 @@
     <li> Location : <%= @fan_club.location %>
     <li> Current Team : <%= Team.all.find_by(id: @fan_club.team.id).name.capitalize%>
 </ul>
+
+
+<%= form_tag fan_club_path(@fan_club.id), method: "delete" do %>
+  <%= submit_tag "Delete #{@fan_club.name}" %>
+<% end %> 

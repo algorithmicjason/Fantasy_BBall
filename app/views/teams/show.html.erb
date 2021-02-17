@@ -4,3 +4,7 @@
     <li> Color : <%= @team.color %>
     <li> City : <%= @team.city %>
 </ul>
+
+<%= form_tag team_path(@team.id), method: "delete" do %>
+    <%= submit_tag "Delete #{@team.name}" %>
+  <% end %> 
