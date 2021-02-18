@@ -1,7 +1,13 @@
 <h1> List of all the Teams!</h1>
 
 <% @teams.each do |team| %>
-    <li><%= team.name.capitalize%>
-    <% end %>
+    <li>
+   
+    <%= link_to team.name.capitalize, team_path(team) %>
+    <% end %><br><br>
+
+    <%= form_tag root_path, method: "get" do %>
+        <%= submit_tag "Home" %>
+      <% end %> <br><br>
 
 </li>

@@ -1,8 +1,14 @@
-<h1> List of all the Athletes</h1>
+<h1> List of all the Players</h1>
 
 <% @athletes.each do |athlete| %>
-    <li><%= athlete.name %>
+    <li>
+    
+    
+    <%= link_to athlete.name, athlete_path(athlete) %>
 
-    <% end %>
+    <% end %><br><br>
 
+    <%= form_tag root_path, method: "get" do %>
+        <%= submit_tag "Home" %>
+      <% end %> <br><br>
 </li>

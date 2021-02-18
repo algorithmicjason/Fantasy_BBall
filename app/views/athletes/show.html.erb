@@ -1,3 +1,6 @@
+
+
+
 <h1> Welcome to <%= @athlete.name%> page </h1>
 
 
@@ -9,9 +12,17 @@
     <li> Championships : <%= @athlete.championships %>
     <li> Current Team : <%= Team.all.find_by(id: @athlete.team.id).name.capitalize%>
 </ul>
-<h2><%= @athlete.name %></h2>
+
 <%= form_tag athlete_path(@athlete.id), method: "delete" do %>
   <%= submit_tag "Delete #{@athlete.name}" %>
-<% end %> 
+<% end %> <br><br>
 
+
+<%= form_tag athletes_path, method: "get" do %>
+  <%= submit_tag "Back" %>
+<% end %> <br><br>
+
+<%= form_tag root_path, method: "get" do %>
+  <%= submit_tag "Home" %>
+<% end %> <br><br>
 
