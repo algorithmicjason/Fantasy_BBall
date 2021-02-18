@@ -19,10 +19,11 @@
 
 
 <%= form_tag athletes_path, method: "get" do %>
-  <%= submit_tag "Back" %>
+  <%= submit_tag "See all Players" %>
 <% end %> <br><br>
 
 <%= form_tag root_path, method: "get" do %>
   <%= submit_tag "Home" %>
 <% end %> <br><br>
 
+<%= link_to 'Back', :back %>

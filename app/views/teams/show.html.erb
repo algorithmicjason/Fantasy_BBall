@@ -5,15 +5,38 @@
     <li> City : <%= @team.city %>
 </ul>
 
+<h2> Players on the <%=@team.name %> </h2>
+
+<% @team.athletes.each do |athlete| %>
+    <ol>  
+    <%= link_to athlete.name, athlete_path(athlete) %>  
+    </ol>
+    <% end %><br><br>
+
+
+
+
+
+
 <%= form_tag team_path(@team.id), method: "delete" do %>
     <%= submit_tag "Delete #{@team.name}" %>
   <% end %> <br><br>
 
   <%= form_tag teams_path, method: "get" do %>
-    <%= submit_tag "Back" %>
+    <%= submit_tag "See all teams " %>
   <% end %> <br><br>
   
   <%= form_tag root_path, method: "get" do %>
     <%= submit_tag "Home" %>
   <% end %> <br><br>
   
+
+  <%= form_tag edit_team_path, method: "get" do %>
+    <%= submit_tag "Edit #{@team.name}" %>
+  <% end %> <br><br>
+
+  
+  
+  
+
+

@@ -24,7 +24,7 @@ class TeamsController < ApplicationController
 
     def update 
         find_team
-        @team.update(fan_club_params)
+        @team.update(team_params)
         @team.save
         redirect_to teams_path
     end 

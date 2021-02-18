@@ -11,4 +11,10 @@
     <%= form_tag root_path, method: "get" do %>
         <%= submit_tag "Home" %>
       <% end %> <br><br>
+
+      <%= form_tag new_athlete_path, method: "get" do %>
+        <%= submit_tag "Create a new player" %>
+      <% end %> <br><br>
 </li>
+
+<%= link_to 'Back', :back %>
