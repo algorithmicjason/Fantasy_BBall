@@ -6,6 +6,9 @@ class AthletesController < ApplicationController
         @athletes = Athlete.all 
     end 
 
+    def show
+        
+    end
     
     def new 
         @athlete = Athlete.new 
@@ -21,7 +24,10 @@ class AthletesController < ApplicationController
         end 
     end 
 
+    def edit 
 
+    end
+    
     def update 
         find_athlete
         if @athlete.update(athlete_params)

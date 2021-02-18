@@ -8,4 +8,5 @@ class Coach < ApplicationRecord
   validates :bio, length: { maximum: 1000,
     too_long: "%{count} characters is the maximum allowed" }
     validates :championships , numericality: true
+    validates :team_id, uniqueness: true
 end
