@@ -1,4 +1,4 @@
-<h1> Welcome to <%= @mascot.name%> page </h1>
+<h1> Welcome to <%= @mascot.name%>'s page </h1>
 <ul>
     <li> Name : <%= @mascot.name %>
     <li> Bio : <%= @mascot.bio %>
@@ -8,4 +8,8 @@
 
 <%= form_tag mascot_path(@mascot.id), method: "delete" do %>
     <%= submit_tag "Delete #{@mascot.name}" %>
-  <% end %> 
+    <% end %>
+    <%= form_tag mascots_path, method: "get" do %>
+        <%= submit_tag "Back" %>
+      <% end %>
+

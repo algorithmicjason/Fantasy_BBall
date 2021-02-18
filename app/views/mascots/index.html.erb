@@ -1,7 +1,7 @@
 <h1> List of all the Mascots</h1>
 
 <% @mascot.each do |mascot| %>
-    <li><%= mascot.name %>
+    <li><%=link_to mascot.name, mascot_path(mascot) %>
 
     <% end %>
 

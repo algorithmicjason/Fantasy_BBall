@@ -1,6 +1,8 @@
 <h1> List of all Coaches </h1>
 <% @coaches.each do |coach| %>
     <li>
-    <%= coach.name %>
+    <%= link_to coach.name, coach_path(coach) %>
 
     <%end%></li>
+
+  

@@ -1,6 +1,6 @@
 <h1> List of all Fan Clubs </h1>
 <% @fan_club.each do |fan| %>
     <li>
-    <%= fan.name %>
+    <%= link_to fan.name, fan_club_path(fan) %>
 
     <%end%></li>
