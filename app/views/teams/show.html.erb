@@ -7,4 +7,13 @@
 
 <%= form_tag team_path(@team.id), method: "delete" do %>
     <%= submit_tag "Delete #{@team.name}" %>
-  <% end %> 
+  <% end %> <br><br>
+
+  <%= form_tag teams_path, method: "get" do %>
+    <%= submit_tag "Back" %>
+  <% end %> <br><br>
+  
+  <%= form_tag root_path, method: "get" do %>
+    <%= submit_tag "Home" %>
+  <% end %> <br><br>
+  
