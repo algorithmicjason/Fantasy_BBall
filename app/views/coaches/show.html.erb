@@ -1,4 +1,4 @@
-<h1> Welcome to <%= @coach.name%> page </h1>
+<h1> Welcome to <%= @coach.name%>'s page </h1>
 <ul>
     <li> Name : <%= @coach.name %>
     <li> Age : <%= @coach.age %>
@@ -11,4 +11,11 @@
 <h2><%= @coach.name %></h2>
 <%= form_tag coach_path(@coach.id), method: "delete" do %>
   <%= submit_tag "Delete #{@coach.name}" %>
-<% end %> 
+  <% end %>
+
+  <%= form_tag coaches_path, method: "get" do %>
+    <%= submit_tag "Back" %>
+  <% end %>
+  <%= form_tag root_, method: "get" do %>
+    <%= submit_tag "Back" %>
+  <% end %>
