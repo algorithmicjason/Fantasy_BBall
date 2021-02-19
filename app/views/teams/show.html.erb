@@ -22,10 +22,17 @@
     <% end %><br><br>
 
 
+<<<<<<< HEAD
 
   <%= form_tag edit_team_path, method: "get" do %>
       <%= submit_tag "Edit #{@team.name}" %>
     <% end %> <br><br>
+=======
+ <%= form_tag edit_team_path, method: "get" do %>
+    <%= submit_tag "Edit #{@team.name}" %>
+  <% end %> <br><br>
+
+>>>>>>> d8c558239ac338eb56abc1d659141f99fd93768e
 
 
 <%= form_tag team_path(@team.id), method: "delete" do %>

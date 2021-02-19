@@ -15,6 +15,7 @@
     <li> Current Team : <%= Team.all.find_by(id: @coach.team.id).name.capitalize%>
 </ul><br><br>
 
+<<<<<<< HEAD
 
   <%= form_tag edit_coach_path, method: "get" do %>
     <%= submit_tag "Edit #{@coach.name}" %>
@@ -24,6 +25,18 @@
     <%= submit_tag "Delete #{@coach.name}" %>
     <% end %><br>
   
+=======
+
+
+<%= form_tag edit_coach_path, method: "get" do %>
+  <%= submit_tag "Edit #{@coach.name}" %>
+<% end %><br><br>
+
+<%= form_tag coach_path(@coach.id), method: "delete" do %>
+  <%= submit_tag "Delete #{@coach.name}" %>
+  <% end %>
+
+>>>>>>> d8c558239ac338eb56abc1d659141f99fd93768e
   
 
 

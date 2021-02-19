@@ -21,6 +21,9 @@
 
 
 
+<%= form_tag edit_fan_club_path, method: "get" do %>
+  <%= submit_tag "Edit #{@fan_club.name}" %>
+<% end %><br><br>
 
 <%= form_tag fan_club_path(@fan_club.id), method: "delete" do %>
   <%= submit_tag "Delete #{@fan_club.name}" %>
