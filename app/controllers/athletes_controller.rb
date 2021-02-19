@@ -7,7 +7,7 @@ class AthletesController < ApplicationController
     end 
 
     def show
-        
+        find_athlete
     end
     
     def new 
@@ -25,7 +25,7 @@ class AthletesController < ApplicationController
     end 
 
     def edit 
-
+        find_athlete
     end
     
     def update 
@@ -44,13 +44,16 @@ class AthletesController < ApplicationController
 
     end
 
+    def find_athlete
+        @athlete = Athlete.find_by(id: params[:id])
+    end  
     private 
 
     def athlete_params
         params.require(:athlete).permit(:team_id, :name, :position, :jersey, :height, :years_of_experience, :championships)
     end 
 
-    def find_athlete
-        @athlete = Athlete.find_by(id: params[:id])
-    end         
+    # def find_athlete
+    #     @athlete = Athlete.find_by(id: params[:id])
+    # end         
 end
