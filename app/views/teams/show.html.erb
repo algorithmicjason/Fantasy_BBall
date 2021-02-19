@@ -8,9 +8,9 @@
 <div class="container">
 <h1> Welcome to <%= @team.name%>'s page </h1>
 <ul>
-    <li> Team Name : <%= @team.name.capitalize %>
-    <li> Team Color : <%= @team.color %>
-    <li> City : <%= @team.city %>
+    <li> Name : <%= @team.name.titleize %>
+    <li> Color : <%= @team.color.titleize %>
+    <li> City : <%= @team.city.titleize %>
 </ul>
 
 <h2> Players on the <%=@team.name %> </h2>
@@ -22,17 +22,10 @@
     <% end %><br><br>
 
 
-<<<<<<< HEAD
-
-  <%= form_tag edit_team_path, method: "get" do %>
-      <%= submit_tag "Edit #{@team.name}" %>
-    <% end %> <br><br>
-=======
  <%= form_tag edit_team_path, method: "get" do %>
     <%= submit_tag "Edit #{@team.name}" %>
   <% end %> <br><br>
 
->>>>>>> d8c558239ac338eb56abc1d659141f99fd93768e
 
 
 <%= form_tag team_path(@team.id), method: "delete" do %>

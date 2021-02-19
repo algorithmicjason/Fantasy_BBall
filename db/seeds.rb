@@ -45,9 +45,9 @@ spur_fans = FanClub.create(team_id:5, name:"Bar", location: "Bar on Fifth Ave.")
 #TEAM
 5.times do 
     team = Team.create(
-        color: Faker::Color.color_name,
-        name: Faker::Sports::Basketball.unique.team, 
-        city: "Houston"
+        color: Faker::Color.color_name.titleize,
+        name: Faker::Sports::Basketball.unique.team.titleize, 
+        city: Faker::Address.state
         )
 end
 
