@@ -1,3 +1,10 @@
+<html>
+<head>
+<link rel="stylesheet" href="pages.scss">
+</head>
+
+<body>
+<div class="container">
 <h1> Welcome to <%= @coach.name%>'s page </h1>
 <ul>
     <li> Name : <%= @coach.name %>
@@ -19,3 +26,9 @@
   <%= form_tag root_path, method: "get" do %>
     <%= submit_tag "Home" %>
   <% end %>
+
+
+
+</div>
+</body>
+</html>

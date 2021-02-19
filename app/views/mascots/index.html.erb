@@ -1,8 +1,17 @@
+<html>
+<head>
+<link rel="stylesheet" href="pages.scss">
+</head>
+
+<body>
+<div class="container">
 <h1> List of all the Mascots</h1>
 
 <% @mascot.each do |mascot| %>
     <li><%=link_to mascot.name, mascot_path(mascot) %>
-
     <% end %>
 
 </li>
+</div>
+</body>
+</html>

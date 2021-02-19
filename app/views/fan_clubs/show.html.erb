@@ -1,3 +1,10 @@
+<html>
+<head>
+<link rel="stylesheet" href="pages.scss">
+</head>
+
+<body>
+<div class="container">
 <h1> Welcome to <%= @fan_club.name%> page </h1>
 <ul>
     <li> Name : <%= @fan_club.name %>
@@ -9,3 +16,9 @@
 <%= form_tag fan_club_path(@fan_club.id), method: "delete" do %>
   <%= submit_tag "Delete #{@fan_club.name}" %>
 <% end %> 
+
+
+</div>
+</body>
+</html>
+

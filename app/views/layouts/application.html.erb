@@ -6,57 +6,47 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
   
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    
+  
   </head>
 
   <body>
-  
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" id="bottom_navbar">
+  <div class="container-fluid">
 
-  <header class="navbar  navbar-inverse">
-    <div class="navbar-class">
-      <div class="container">
-
-
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-            <a class="nav-link" href="#">Features</a>
-            <a class="nav-link" href="#">Pricing</a>
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </div>
-        </div>
-      </div>
-    </nav>
-        # <ul class="nav navbar-nav">
-        #   <li class="active"><a href="#">HOME</a></li>
-        #   <li><%=link_to "ABOUT"%></li>
-        #   <li><%=link_to "OUR SERVICES" %></li>
-        #   <li><%=link_to "RATES" %></li>
-        #   <li><%=link_to'CAREERS'%></li>
-        #   <li><a href="#">TRAINING</a></li>
-        #   <li><%= link_to"GALLERY" %></li>
-        #   <li><%=link_to"MEDIA"%></li>
-        #   <li><%=link_to"FAQS" %></li>
-        #   <li><a href="#">CONTACT</a></li>
-        # </ul>
-
-
-      </div>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/teams">Teams</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/athletes">Players</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/coaches">Coaches</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/mascots">Mascots</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/fan_clubs">Fan Clubs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/abouts">About</a>
+        </li>
+        
+      </ul>
     </div>
-  </header>
-
+  </div>
+</nav>
+  
+  
   
     <%= yield %>
   </body>
+
 </html>

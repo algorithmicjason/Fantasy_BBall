@@ -1,5 +1,11 @@
-<h1> List of all the Players</h1>
+<html>
+<head>
+<link rel="stylesheet" href="pages.scss">
+</head>
 
+<body>
+<div class="container">
+<h1> List of all the Players</h1>
 <% @athletes.each do |athlete| %>
     <li>
     
@@ -8,7 +14,16 @@
 
     <% end %><br><br>
 
+
     <%= form_tag root_path, method: "get" do %>
         <%= submit_tag "Home" %>
       <% end %> <br><br>
 </li>
+</div>
+</body>
+</html>
+
+
+
+
+

@@ -1,3 +1,10 @@
+<html>
+<head>
+<link rel="stylesheet" href="pages.scss">
+</head>
+
+<body>
+<div class="container">
 <h1> Edit Mascot! </h1>
 
 <%= form_with model: @mascot do |a| %>
@@ -8,3 +15,8 @@
     Team :  <%= a.collection_select :team_id , Team.all, :id, :name %><br><br>
     <%= a.submit %><br>
   <% end %>
+
+
+</div>
+</body>
+</html>
