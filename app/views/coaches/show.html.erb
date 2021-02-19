@@ -15,17 +15,17 @@
     <li> Current Team : <%= Team.all.find_by(id: @coach.team.id).name.capitalize%>
 </ul>
 
-<h2><%= @coach.name %></h2>
+
+
+<%= form_tag edit_coach_path, method: "get" do %>
+  <%= submit_tag "Edit #{@coach.name}" %>
+<% end %><br><br>
+
 <%= form_tag coach_path(@coach.id), method: "delete" do %>
   <%= submit_tag "Delete #{@coach.name}" %>
   <% end %>
 
-  <%= form_tag coaches_path, method: "get" do %>
-    <%= submit_tag "All Coaches" %>
-  <% end %>
-  <%= form_tag root_path, method: "get" do %>
-    <%= submit_tag "Home" %>
-  <% end %>
+  
 
 
 

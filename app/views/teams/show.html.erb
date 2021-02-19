@@ -22,7 +22,9 @@
     <% end %><br><br>
 
 
-
+ <%= form_tag edit_team_path, method: "get" do %>
+    <%= submit_tag "Edit #{@team.name}" %>
+  <% end %> <br><br>
 
 
 
@@ -30,17 +32,9 @@
     <%= submit_tag "Delete #{@team.name}" %>
   <% end %> <br><br>
 
-  <%= form_tag teams_path, method: "get" do %>
-    <%= submit_tag "See all teams " %>
-  <% end %> <br><br>
+
   
-  <%= form_tag root_path, method: "get" do %>
-    <%= submit_tag "Home" %>
-  <% end %> <br><br>
-  
- <%= form_tag edit_team_path, method: "get" do %>
-    <%= submit_tag "Edit #{@team.name}" %>
-  <% end %> <br><br>
+
 
 </div>
 </body>
