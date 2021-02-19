@@ -8,9 +8,9 @@
 <div class="container">
 <h1> Welcome to <%= @team.name%> page </h1>
 <ul>
-    <li> Name : <%= @team.name.capitalize %>
-    <li> Color : <%= @team.color %>
-    <li> City : <%= @team.city %>
+    <li> Name : <%= @team.name.titleize %>
+    <li> Color : <%= @team.color.titleize %>
+    <li> City : <%= @team.city.titleize %>
 </ul>
 
 <h2> Players on the <%=@team.name %> </h2>
