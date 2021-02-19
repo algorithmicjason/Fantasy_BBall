@@ -1,4 +1,11 @@
-<% if flash[:errors] %>
+<html>
+<head>
+<link rel="stylesheet" href="pages.scss">
+</head>
+
+<body>
+<div class="container">
+</html><% if flash[:errors] %>
 <h3> ERRORS: </h3>
 <% flash[:errors].each do |e| %>
     <li>
@@ -22,5 +29,10 @@
    
     <%= a.submit %><br>
   <% end %>
+
+
+</div>
+</body>
+
 
   

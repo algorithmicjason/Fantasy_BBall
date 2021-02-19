@@ -1,14 +1,22 @@
+<html>
+<head>
+<link rel="stylesheet" href="pages.scss">
+</head>
+
+<body>
+<div class="container">
 <h1> List of all Fan Clubs </h1>
-<% @fan_club.each do |fan| %>
+<% @fan_clubs.each do |fan| %>
     <li>
     <%= link_to fan.name, fan_club_path(fan) %>
 
     <%end%></li><br><br>
-
-    <%= form_tag root_path, method: "get" do %>
-        <%= submit_tag "Home" %>
-      <% end %> <br><br>
       
       <%= form_tag new_fan_club_path, method: "get" do %>
         <%= submit_tag "Start your own Fan Club" %>
       <% end %> <br><br>
+    </li>
+</div>
+</body>
+</html>
+

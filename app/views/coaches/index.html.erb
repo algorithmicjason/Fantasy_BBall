@@ -1,16 +1,23 @@
+<html>
+    <head>
+    <link rel="stylesheet" href="pages.scss">
+    </head>
+    
+    <body>
+    <div class="container">
 <h1> List of all Coaches </h1>
 <% @coaches.each do |coach| %>
     <li>
     <%= link_to coach.name, coach_path(coach) %>
 
     <%end%></li>
-
-    <%= form_tag root_path, method: "get" do %>
-        <%= submit_tag "Home" %>
-      <% end %> <br><br>
       
       <%= form_tag new_coach_path, method: "get" do %>
         <%= submit_tag "Create a Coach" %>
       <% end %> <br><br>
 
   
+
+    </div>
+    </body>
+    </html>

@@ -1,3 +1,10 @@
+<html>
+<head>
+<link rel="stylesheet" href="pages.scss">
+</head>
+
+<body>
+<div class="container">
 <h1> Welcome to <%= @coach.name%>'s page </h1>
 <ul>
     <li> Name : <%= @coach.name %>
@@ -9,12 +16,6 @@
 </ul><br><br>
 
 
-
-
-  <%= form_tag root_path, method: "get" do %>
-    <%= submit_tag "Home" %>
-  <% end %><br><br>
-
   <%= form_tag edit_coach_path, method: "get" do %>
     <%= submit_tag "Edit #{@coach.name}" %>
   <% end %><br><br>
@@ -22,3 +23,11 @@
   <%= form_tag coach_path(@coach.id), method: "delete" do %>
     <%= submit_tag "Delete #{@coach.name}" %>
     <% end %><br>
+  
+  
+
+
+
+</div>
+</body>
+</html>

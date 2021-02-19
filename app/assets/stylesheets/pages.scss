@@ -1,3 +1,59 @@
 body {
-    background-color:red;
+    color: red;
+    font-size: 30px;
+    background-image: url(https://i.pinimg.com/originals/98/73/b9/9873b98a7eee9707d050565b085fc879.png);
 }
+.homepage {
+    margin-left: 5px;
+    padding-bottom: 5px;
+    font-size: x-large;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 120px;
+}
+#bottom_navbar {
+    position: static;
+    left:0;
+    right: 0;
+    top: 0;
+    background-color: orange;
+
+    max-height: 50px;
+}
+#bottom_navbar ul{
+    display: table;
+    top: 5px;
+    justify-content: stretch;
+}
+
+#bottom_navbar li{
+    display: table-cell;
+    padding: 15px 75px;
+    align-items: center;
+}
+
+.container {
+    background-color: yellow;
+    max-width: 50%;
+}
+#center {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+    position: absolute;
+    
+    left: 25%;
+    top: 30%;
+}
+#john{
+    color:green;
+}
+
+#jason{
+    color:blue;
+}
+

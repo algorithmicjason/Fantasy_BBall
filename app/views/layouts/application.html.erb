@@ -5,12 +5,48 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+  
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    
+  
   </head>
 
   <body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" id="bottom_navbar">
+  <div class="container-fluid">
+
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/teams">Teams</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/athletes">Players</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/coaches">Coaches</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/mascots">Mascots</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/fan_clubs">Fan Clubs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/abouts">About</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+  
+  
+  
     <%= yield %>
   </body>
+
 </html>

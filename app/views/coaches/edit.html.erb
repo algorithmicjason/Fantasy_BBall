@@ -1,4 +1,23 @@
+
+<html>
+<head>
+<link rel="stylesheet" href="pages.scss">
+</head>
+
+<body>
+<div class="container">
+
 <h1> Edit <%= @coach.name %>' profile</h1> 
+
+<% if flash[:errors] %>
+<h3> ERRORS: </h3>
+<% flash[:errors].each do |e| %>
+    
+    <%= e %>
+  
+<% end %>
+<% end %><br><br>
+
 
 <%= form_with model: @coach do |a| %>
     
@@ -10,4 +29,9 @@
    
     <%= a.submit %><br>
   <% end %>
+
+</div>
+</body>
+</html>
+
   

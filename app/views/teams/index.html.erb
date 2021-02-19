@@ -1,18 +1,25 @@
+<html>
+<head>
+<link rel="stylesheet" href="pages.scss">
+</head>
+<body>
+<div class="container">
 <h1> List of all the Teams!</h1>
-
 <% @teams.each do |team| %>
     <li>
    
     <%= link_to team.name.capitalize, team_path(team) %>
     <% end %><br><br>
 
-    <%= form_tag root_path, method: "get" do %>
-        <%= submit_tag "Home" %>
-      <% end %> <br><br>
-
-      <%= form_tag new_team_path, method: "get" do %>
+  
+  <%= form_tag new_team_path, method: "get" do %>
         <%= submit_tag "Create a new Team" %>
       <% end %> <br><br>
 
-
 </li>
+</div>
+</body>
+</html>
+    
+
+

@@ -1,7 +1,15 @@
-<h1> Welcome to <%= @team.name%> page </h1>
+
+<html>
+<head>
+<link rel="stylesheet" href="pages.scss">
+</head>
+
+<body>
+<div class="container">
+<h1> Welcome to <%= @team.name%>'s page </h1>
 <ul>
-    <li> Name : <%= @team.name.capitalize %>
-    <li> Color : <%= @team.color %>
+    <li> Team Name : <%= @team.name.capitalize %>
+    <li> Team Color : <%= @team.color %>
     <li> City : <%= @team.city %>
 </ul>
 
@@ -15,25 +23,23 @@
 
 
 
-
+  <%= form_tag edit_team_path, method: "get" do %>
+      <%= submit_tag "Edit #{@team.name}" %>
+    <% end %> <br><br>
 
 
 <%= form_tag team_path(@team.id), method: "delete" do %>
     <%= submit_tag "Delete #{@team.name}" %>
   <% end %> <br><br>
 
-  <%= form_tag teams_path, method: "get" do %>
-    <%= submit_tag "See all teams " %>
-  <% end %> <br><br>
-  
-  <%= form_tag root_path, method: "get" do %>
-    <%= submit_tag "Home" %>
-  <% end %> <br><br>
+
   
 
-  <%= form_tag edit_team_path, method: "get" do %>
-    <%= submit_tag "Edit #{@team.name}" %>
-  <% end %> <br><br>
+
+</div>
+</body>
+</html>
+ 
 
   
   

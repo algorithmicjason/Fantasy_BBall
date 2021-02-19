@@ -1,7 +1,13 @@
+<html>
+<head>
+<link rel="stylesheet" href="pages.scss">
+</head>
+
+<body>
+<div class="container">
 
 
-
-<h1> Welcome to <%= @athlete.name%> page </h1>
+<h1> Welcome to <%= @athlete.name%>'s profile page! </h1>
 
 
 <ul>
@@ -18,13 +24,6 @@
 <% end %><br><br>
 
 
-<%= form_tag athletes_path, method: "get" do %>
-  <%= submit_tag "See all Players" %>
-<% end %> <br><br>
-
-<%= form_tag root_path, method: "get" do %>
-  <%= submit_tag "Home" %>
-<% end %> <br><br>
 
 <%= form_tag athlete_path(@athlete.id), method: "delete" do %>
   <%= submit_tag "Delete #{@athlete.name}" %>
@@ -32,4 +31,10 @@
 
 
 
- <!--<%= link_to 'Back', :back %>-->
+
+
+</div>
+</body>
+</html>
+
+

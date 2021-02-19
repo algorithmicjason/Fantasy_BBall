@@ -1,3 +1,10 @@
+<html>
+<head>
+<link rel="stylesheet" href="pages.scss">
+</head>
+
+<body>
+<div class="container">
 <% if flash[:errors] %>
 <h3> ERRORS: </h3>
 <% flash[:errors].each do |e| %>
@@ -16,3 +23,8 @@
     Team :  <%= a.collection_select :team_id , Team.all, :id, :name %><br><br>
     <%= a.submit %><br>
   <% end %>
+
+
+</div>
+</body>
+</html>

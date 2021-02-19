@@ -26,9 +26,12 @@ class CoachesController < ApplicationController
 
     def update 
         find_coach
-        @coach.update(coach_params)
-        @coach.save
+       if @coach.update(coach_params)
         redirect_to coaches_path
+       else 
+        flash[:errors] = @coach.errors.full_messages
+        redirect_to edit_coach_path(@coach)
+    end 
     end 
 
     def destroy 

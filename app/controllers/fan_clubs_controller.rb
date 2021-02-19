@@ -4,7 +4,7 @@ class FanClubsController < ApplicationController
     
     
     def index
-        @fan_club = FanClub.all 
+        @fan_clubs = FanClub.all 
     end 
 
     def new 

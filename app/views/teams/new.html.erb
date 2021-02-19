@@ -1,4 +1,11 @@
-<h1> Create your own team </h1>
+<html>
+<head>
+<link rel="stylesheet" href="pages.scss">
+</head>
+
+<body>
+<div class="container">
+<h1> Create Your Own Team! </h1>
 
 <% if flash[:errors] %>
 <h3> ERRORS: </h3>
@@ -10,10 +17,15 @@
 
 <%= form_with model: @team do |a| %>
     
-    Name : <%= a.text_field :name %><br><br>
-    Color : <%= a.text_field :color %><br><br>
+    Team Name : <%= a.text_field :name %><br><br>
+    Team Color : <%= a.text_field :color %><br><br>
     City : <%= a.text_field :city   %><br><br>
     
    
     <%= a.submit %><br>
   <% end %>
+
+
+</div>
+</body>
+</html>

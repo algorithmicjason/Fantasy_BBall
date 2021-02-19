@@ -1,17 +1,23 @@
+<html>
+<head>
+<link rel="stylesheet" href="pages.scss">
+</head>
+
+<body>
+<div class="container">
 <h1> List of all the Mascots</h1>
 
 <% @mascot.each do |mascot| %>
     <li><%=link_to mascot.name, mascot_path(mascot) %>
-
     <% end %>
 
 </li><br><br>
 
-
-<%= form_tag root_path, method: "get" do %>
-    <%= submit_tag "Home" %>
-  <% end %> <br><br>
   
   <%= form_tag new_mascot_path, method: "get" do %>
     <%= submit_tag "Create a Mascot" %>
   <% end %> <br><br>
+
+</div>
+</body>
+</html>
