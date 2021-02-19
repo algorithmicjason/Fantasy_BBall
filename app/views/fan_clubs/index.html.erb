@@ -3,4 +3,12 @@
     <li>
     <%= link_to fan.name, fan_club_path(fan) %>
 
-    <%end%></li>
+    <%end%></li><br><br>
+
+    <%= form_tag root_path, method: "get" do %>
+        <%= submit_tag "Home" %>
+      <% end %> <br><br>
+      
+      <%= form_tag new_fan_club_path, method: "get" do %>
+        <%= submit_tag "Start your own Fan Club" %>
+      <% end %> <br><br>

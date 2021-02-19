@@ -4,12 +4,21 @@
     <li> Bio : <%= @mascot.bio %>
     <li> Character : <%= @mascot.character %>
     <li> Current Team : <%= Team.all.find_by(id: @mascot.team.id).name.capitalize%>
-</ul>
+</ul><br><br>
 
-<%= form_tag mascot_path(@mascot.id), method: "delete" do %>
-    <%= submit_tag "Delete #{@mascot.name}" %>
-    <% end %>
+
+    
+    
     <%= form_tag mascots_path, method: "get" do %>
         <%= submit_tag "Back" %>
-      <% end %>
+      <% end %><br><br>
+
+
+      <%= form_tag edit_mascot_path, method: "get" do %>
+        <%= submit_tag "Edit #{@mascot.name}" %>
+      <% end %><br><br>
+
+      <%= form_tag mascot_path(@mascot.id), method: "delete" do %>
+        <%= submit_tag "Delete #{@mascot.name}" %>
+        <% end %>
 

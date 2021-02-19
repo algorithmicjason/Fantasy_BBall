@@ -3,7 +3,21 @@
     <li> Name : <%= @fan_club.name %>
     <li> Location : <%= @fan_club.location %>
     <li> Current Team : <%= Team.all.find_by(id: @fan_club.team.id).name.capitalize%>
-</ul>
+</ul><br>
+
+
+
+
+<%= form_tag root_path, method: "get" do %>
+  <%= submit_tag "Home" %>
+<% end %> <br><br><br>
+
+
+<%= form_tag edit_fan_club_path, method: "get" do %>
+  <%= submit_tag "Edit your Fan Club" %>
+<% end %> <br><br><br>
+
+
 
 
 <%= form_tag fan_club_path(@fan_club.id), method: "delete" do %>

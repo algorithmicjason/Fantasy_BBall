@@ -5,4 +5,12 @@
 
     <%end%></li>
 
+    <%= form_tag root_path, method: "get" do %>
+        <%= submit_tag "Home" %>
+      <% end %> <br><br>
+      
+      <%= form_tag new_coach_path, method: "get" do %>
+        <%= submit_tag "Create a Coach" %>
+      <% end %> <br><br>
+
   

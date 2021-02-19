@@ -11,11 +11,11 @@
     <li> Years in the league : <%= @athlete.years_of_experience %>
     <li> Championships : <%= @athlete.championships %>
     <li> Current Team : <%= Team.all.find_by(id: @athlete.team.id).name.capitalize%>
-</ul>
+</ul><br><br>
 
-<%= form_tag athlete_path(@athlete.id), method: "delete" do %>
-  <%= submit_tag "Delete #{@athlete.name}" %>
-<% end %> <br><br>
+<%= form_tag edit_athlete_path, method: "get" do %>
+  <%= submit_tag "Edit #{@athlete.name}" %>
+<% end %><br><br>
 
 
 <%= form_tag athletes_path, method: "get" do %>
@@ -26,4 +26,10 @@
   <%= submit_tag "Home" %>
 <% end %> <br><br>
 
-<%= link_to 'Back', :back %>
+<%= form_tag athlete_path(@athlete.id), method: "delete" do %>
+  <%= submit_tag "Delete #{@athlete.name}" %>
+<% end %> <br><br>
+
+
+
+ <!--<%= link_to 'Back', :back %>-->
