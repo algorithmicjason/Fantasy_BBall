@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2021_02_12_210349) do
     t.string "name"
     t.string "position"
     t.integer "jersey"
-    t.integer "height"
+    t.float "height"
     t.integer "years_of_experience"
     t.integer "championships"
     t.datetime "created_at", precision: 6, null: false

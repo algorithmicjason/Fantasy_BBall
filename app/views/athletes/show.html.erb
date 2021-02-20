@@ -13,10 +13,10 @@
 <ul>
     <li> Position : <%= @athlete.position %>
     <li> Jersey Number : <%= @athlete.jersey %>
-    <li> Height : <%= (@athlete.height*0.0833).round(1).to_s.sub(".","'") %>
+    <li> Height : <%= @athlete.height.round(1).to_s.sub(".","'") %>
     <li> Years in the league : <%= @athlete.years_of_experience %>
     <li> Championships : <%= @athlete.championships %>
-    <li> Current Team : <%= Team.all.find_by(id: @athlete.team.id).name.capitalize%>
+    <li> Current Team : <%= Team.all.find_by(id: @athlete.team.id).name.titleize%>
 </ul><br><br>
 
 <%= form_tag edit_athlete_path, method: "get" do %>

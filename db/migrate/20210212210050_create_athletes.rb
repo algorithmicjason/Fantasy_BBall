@@ -5,7 +5,7 @@ class CreateAthletes < ActiveRecord::Migration[6.1]
       t.string :name
       t.string :position
       t.integer :jersey
-      t.integer :height
+      t.float :height
       t.integer :years_of_experience
       t.integer :championships
 
